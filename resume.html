@@ -1,0 +1,137 @@
+---
+layout: bootstrap
+
+---
+<!-- 
+<div class="d-flex justify-content-center align-items-end" style="height:300px;">
+    <div class="d-flex flex-wrap justify-content-center">
+        <div style="width:300px; height:50px; ">a</div>
+        <div style="width:300px; height:50px;">b</div>
+        <div style="width:300px; height:50px; ">a</div>
+        <div style="width:300px; height:50px;">b</div>
+    </div>
+</div> -->
+
+{% assign r = site.data.resume %}
+
+<!-- intro -->
+<div class=" v-fae v-fjc bg4" style="height:600px; ">
+    <div class="v-cc v-fw bg1" >
+        <div class="v-950">
+            <div id="myslider" style="width:470px; height:470px;">
+                    <img style="width:100%;" src="assets/img/vadim_ivlev_developer_bw.jpg"/>
+                    <img style="width:100%" src="assets/img/IMG_0085_bw.jpg"/>
+            </div>
+        </div>  
+        <div class="" style="width: 470px; height: 470px; padding:50px;">
+            <h1>{{ r.NAME }}</h1>
+            <br>
+            <div style="text-transform: uppercase;"> {{ r.SHORT  | markdownify }} </div>
+
+            {% for c in r.CONTACTS  %}
+            <b>{{c[0]}} : </b><a href='{{ c[1] }}'>{{ c[1] }}</a><br>                
+            {% endfor %}
+        </div>
+     </div>
+</div>
+
+
+<!-- media links -->
+<div class="v-cc bg1">
+
+    <div class="v-cc v-fw bg4" style="width:940px; ">
+        <a href="" target="_blank"><img src="assets/img/in.png" class="v-micon"   alt=""></a>
+        <a href="" target="_blank"><img src="assets/img/f.png" class="v-micon"   alt=""></a>
+        <a href="" target="_blank"><img src="assets/img/g.png" class="v-micon"   alt=""></a>
+        <a href="" target="_blank"><img src="assets/img/git.png" class="v-micon"   alt=""></a>
+    </div>
+
+</div>
+
+
+<!-- greetings -->
+<div class="v-cc bg1" style="text-align: center; padding: 50px 0 50px 0;">
+    <div class="" style="width:470px; ">
+        <h2> Hello I'm Vadim </h2>
+        <div>{{ r.SUMMARY | markdownify }}</div>
+    </div>
+</div>
+
+
+
+<!-- TOOLS -->
+<div class="v-cc bg0" style="height: 100px;">
+        <span class="v-star" >TOOLS</span>
+</div>
+
+<div class="v-fjc v-fas v-fw bg1">
+    {% for t in r.TOOLS %}
+    <div style="padding:20px; width:350px; text-align: center;">
+            <span style="letter-spacing: 4px;">{{t[0]}}</span>
+            <br>
+            {{t[1]}}
+    </div>
+    {% endfor %}
+</div>
+
+
+<!-- EXPERIENCE -->
+<div class="v-cc bg0" style="height: 100px;">
+    <span class="v-star" >EXPERIENCE</span>
+</div>
+
+    
+<!-- EXPERIENCE LIST -->
+<div>
+
+    {% for term in r.EXPERIENCE %}
+    <div class="v-fas v-fjc v-fw bg1 v-job" >
+        <div class="v-pos" >
+            
+            {{ term.POS | linkify | markdownify }}
+        </div>
+        <div class="v-descr v-dot" >
+            {{ term.DESCR | linkify | markdownify  }}
+        </div>
+     </div>
+     {% endfor %} 
+</div>
+    
+
+
+
+<!-- EDUCATION -->
+<div class="v-cc bg0" style="height: 100px;">
+        <span class="v-star" >EDUCATION</span>
+</div>
+<!-- EDUCATION -->
+<div>
+    {% for term in r.EDUCATION %}
+    <div class="v-fas v-fjc v-fw bg1 v-job" >
+        <div class="v-pos" >
+            {{ term.POS | linkify | markdownify }}
+        </div>
+        <div class="v-descr v-dot" >
+            {{ term.DESCR | linkify | markdownify  }}
+        </div>
+    </div>
+    {% endfor %} 
+</div>
+        
+
+
+ 
+
+    
+<!-- CLIENTS -->
+<a href="clients"></a>
+<div id="clients" class="v-cc bg0" style="height: 100px;">
+    <span class="v-star" >CLIENTS</span>
+</div>
+
+
+  
+  
+
+
+

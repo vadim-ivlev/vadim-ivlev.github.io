@@ -1,0 +1,18 @@
+{
+  "name": "resume-jekyll",
+  "version": "1.0.0",
+  "description": "descr",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "keyword",
+    "k2"
+  ],
+  "author": "Vadim",
+  "license": "MIT",
+  "dependencies": {
+    "simple-slider": "^1.0.0"
+  }
+}
