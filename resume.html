@@ -15,16 +15,16 @@ layout: bootstrap
 {% assign r = site.data.resume %}
 
 <!-- intro -->
-<div class=" v-fae v-fjc bg4" style="height:600px; ">
-    <div class="v-cc v-fw bg1" >
-        <div class="v-950">
+<div class=" v-fae v-fjc bg4i" style="height:600px; ">
+    <div class="v-cc v-fw" >
+        <div class="v-950 bg1  wow fadeInLeft">
             <div id="myslider" style="width:470px; height:470px;">
                     <img style="width:100%;" src="assets/img/vadim_ivlev_developer_bw.jpg"/>
                     <img style="width:100%" src="assets/img/IMG_0085_bw.jpg"/>
             </div>
         </div>  
-        <div class="" style="width: 470px; height: 470px; padding:50px;">
-            <h1>{{ r.NAME }}</h1>
+        <div class="bg1 wow fadeInRight" style="width: 470px; height: 470px; padding:50px;">
+            <h1 class="animated  bounce">{{ r.NAME }}</h1>
             <br>
             <div style="text-transform: uppercase;"> {{ r.SHORT  | markdownify }} </div>
 
@@ -75,6 +75,22 @@ layout: bootstrap
 </div>
 
 
+<!-- TOOLS -->
+<div class="v-cc bg4" style="height: 100px;">
+    <span class="v-star" style="color:white" >SKILLS</span>
+</div>
+
+<div class="v-fjc v-fac v-fw bg3" style="padding:40px;">
+    {% for t in r.SKILLS %}
+    <div class="bg2" style="color: white; padding:20px; margin:10px; width:350px; text-align: center;">
+            {{t}}
+    </div>
+{% endfor %}
+</div>
+
+
+
+
 <!-- EXPERIENCE -->
 <div class="v-cc bg0" style="height: 100px;">
     <span class="v-star" >EXPERIENCE</span>
@@ -86,11 +102,11 @@ layout: bootstrap
 
     {% for term in r.EXPERIENCE %}
     <div class="v-fas v-fjc v-fw bg1 v-job" >
-        <div class="v-pos" >
+        <div class="v-pos wow fadeInLeft" >
             
             {{ term.POS | linkify | markdownify }}
         </div>
-        <div class="v-descr v-dot" >
+        <div class="v-descr v-dot wow fadeInRight" >
             {{ term.DESCR | linkify | markdownify  }}
         </div>
      </div>
@@ -127,6 +143,15 @@ layout: bootstrap
 <a href="clients"></a>
 <div id="clients" class="v-cc bg0" style="height: 100px;">
     <span class="v-star" >CLIENTS</span>
+</div>
+<div class="v-fjc v-fac v-fw bg0" style="padding:40px;">
+    {% assign pics="Bloomberg-logo.jpg,thomson-reuters.png,wells-fargo-logo-preview.png,mo.gif,bbc-logo-2.jpg" | split: ','  %}
+    
+    {% for pic in pics %}
+    <div class="v-cc" style="padding:20px; margin:10px; width:120px; height:120px; border: 1px solid silver; border-radius: 100px;">
+            <img src="assets/img/{{pic}}" style="width:80px; filter: grayscale(100%);-webkit-filter:grayscale(100%);">
+    </div>
+    {% endfor %}
 </div>
 
 

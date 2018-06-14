@@ -8,7 +8,8 @@
 } */
 
 
-.v-b {
+
+.v-b- {
     border: 1px solid silver;
     padding:2px;
     margin:2px;
@@ -79,6 +80,8 @@
     letter-spacing: 2px;
     font-size: 1.2em;
     font-weight: bold;
+    min-width: 200px;
+    text-align: center;
 }
 
 .v-star::before {
@@ -111,13 +114,16 @@
 }
 
 .bg4i {
-    background-color: #192351;
-    /* background-image: c */
+    /* background-color: #192351; */
+    background: url( /assets/img/back1.jpg );
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    background-position: center; 
     overflow: hidden;
     
 }
 
-.bg4i::before {
+/* .bg4i::before {
     content: "";
     background: url( /assets/img/back.jpg );
     background-clip: content-box;
@@ -130,7 +136,7 @@
     position: absolute;
     z-index: -0;  
     background-position: center; 
-  }
+  } */
 
 
 
