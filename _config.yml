@@ -36,7 +36,7 @@ google_plus_username: VadimIvlev
 
 
 # Build settings
-destination:       ./docs
+# destination:       ./docs
 markdown:          kramdown
 # theme: minima
 paginate:          5
